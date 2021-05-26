@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The shop all page with all products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="nav-placeholder"></div>
+    </header>
+    <main>
+      <h3 class="title">SHOP</h3>
+      <section class="instead">
+        <div class="filter">
+          <h4>
+            SHOP BY CATEGORY<span>
+              <img
+                id="arr1"
+                src="images/arr_side.svg"
+                alt="The side arrow svg"
+                width="16"
+                height="16"
+              />
+            </span>
+          </h4>
+          <div class="categories disappear">
+            <h5>BAGS</h5>
+            <span id="categories">
+              <label> <input type="checkbox" />Bumbags</label>
+              <label> <input type="checkbox" />Crossbody</label>
+              <label> <input type="checkbox" />Mini bags</label>
+              <label> <input type="checkbox" />Shoulder bags</label>
+              <label> <input type="checkbox" />Tote bags</label>
+              <label> <input type="checkbox" />Wallets</label>
+            </span>
+            <h5>BAG CARE</h5>
+            <h5>CLOTHES</h5>
+          </div>
+          <h4>
+            SHOP BY SEASON<span>
+              <img
+                id="arr2"
+                src="images/arr_side.svg"
+                alt="The side arrow svg"
+                width="16"
+                height="16"
+              />
+            </span>
+          </h4>
+          <div class="seasons disappear">
+            <span id="seasons">
+              <label> <input type="checkbox" />Summer</label>
+              <label> <input type="checkbox" />Winter</label>
+            </span>
+          </div>
+          <h4>
+            SHOP BY COLLECTION<span>
+              <img
+                id="arr3"
+                src="images/arr_side.svg"
+                alt="The side arrow svg"
+                width="16"
+                height="16"
+              />
+            </span>
+          </h4>
+          <div class="collections disappear">
+            <span id="collections">
+              <label> <input type="checkbox" />Snow Queen</label>
+              <label> <input type="checkbox" />Recycle</label>
+              <label> <input type="checkbox" />Classics</label>
+            </span>
+          </div>
+          <h4>
+            SHOP BY COLOR<span>
+              <img
+                id="arr4"
+                src="images/arr_side.svg"
+                alt="The side arrow svg"
+                width="16"
+                height="16"
+              />
+            </span>
+          </h4>
+          <div class="colors">
+            <span id="yellow" class="square yellow disappear"></span>
+            <span id="orange" class="square orange disappear"></span>
+            <span id="pink" class="square pink disappear"></span>
+            <span id="green" class="square green disappear"></span>
+            <span id="turquoise" class="square turquoise disappear"></span>
+            <span id="light_blue" class="square light_blue disappear"></span>
+            <span id="dark_blue" class="square dark_blue disappear"></span>
+            <span id="grey" class="square grey disappear"></span>
+            <span id="silver" class="square silver disappear"></span>
+            <span id="black" class="square black disappear"></span>
+          </div>
+        </div>
+        <div>
+          <h4 id="sort">
+            SORT BY<span>
+              <img
+                id="down_arr"
+                src="images/arr_down.svg"
+                alt="The down arrow svg"
+                width="12"
+                height="12"
+              />
+            </span>
+          </h4>
+          <div class="drop_sort no_border">
+            <span id="popularity" class="sorting disappear">Popularity</span>
+            <span id="newest" class="sorting disappear">Newest</span>
+            <span id="lowest" class="sorting disappear">Lowest price</span>
+            <span id="highest" class="sorting disappear">Highest price</span>
+            <span id="sale" class="sorting disappear">Sale</span>
+          </div>
+          <div class="list">
+            <template id="theList">
+              <article>
+                <a href="shop_all.html">
+                  <img src="images/Siri_recycled_blue-front.webp" />
+                </a>
+                <h4 class="name">ULRIKKE</h4>
+                <p>
+                  <span class="price">399</span>
+                  <span class="discount"> </span>
+                </p>
+                <div class="allColors"></div>
+                <button class="addCart">ADD TO CART</button>
+              </article>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer-placeholder"></div>
+
+      <script>
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-250px";
+          }
+          prevScrollpos = currentScrollPos;
+
+          if (
+            document.body.scrollTop > 50 ||
+            document.documentElement.scrollTop > 150
+          ) {
+            document.getElementById("navigation").className = "blurred";
+          } else {
+            document.getElementById("navigation").className = "";
+          }
+        };
+      </script>
+
+      <script src="//code.jquery.com/jquery.min.js"></script>
+      <script>
+        $.get("nav.html", function (data) {
+          $("#nav-placeholder").replaceWith(data);
+        });
+
+        $.get("footer.html", function (data) {
+          $("#footer-placeholder").replaceWith(data);
+        });
+      </script>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

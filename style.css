@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
+  font-size: 3.2vw;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+
+h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8vw;
+  font-weight: 500;
+  margin-bottom: 0.25vw;
+}
+
+h5 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6vw;
+  font-weight: 500;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4vw;
+  max-width: 45vw;
+  -webkit-text-stroke: #707070;
+  letter-spacing: 2px;
+}
+
+.instead {
+  display: grid;
+  grid-template-areas: "side main";
+  grid-template-columns: 28vw auto;
+  column-gap: 6vw;
+}
+
+.filter {
+  grid-area: side;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+#arr1,
+#arr2,
+#arr3,
+#arr4 {
+  cursor: pointer;
+}
+
+#arr1 {
+  margin-left: 3.1vw;
+}
+
+#arr2 {
+  margin-left: 5.2vw;
+}
+
+#arr3 {
+  margin-left: 1.2vw;
+}
+
+#arr4 {
+  margin-left: 6.3vw;
+}
+
+.rotate {
+  transform: rotate(270deg);
+}
+
+label {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.disappear {
+  display: none;
+}
+
+#seasons {
+  display: flex;
+  flex-direction: column;
+}
+
+#collections {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  margin-top: 0.5vw;
+  column-gap: 6vw;
+  row-gap: 7vw;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.capi {
+  text-transform: uppercase;
+}
+
+.underline {
+  text-decoration-line: line-through;
+  opacity: 50%;
+}
+
+#sort {
+  text-align: end;
+  padding-right: 5vw;
+}
+
+#sort span img:hover {
+  cursor: pointer;
+}
+
+.drop_sort {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.35vw;
+  position: absolute;
+  right: 4.4vw;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3vw;
+  border-style: solid;
+  border-color: #aed5b2;
+  border-width: 0.25vw;
+}
+
+.sorting {
+  cursor: pointer;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  box-shadow: none;
+}
+.sorting:hover {
+  background-color: #aed5b2;
+  border-color: #aed5b2;
+  margin: max-content max-content max-content max-content;
+}
+
+.no_border {
+  border-style: none;
+  border-color: none;
+}
+
+article img {
+  width: 20vw;
+  height: 20vw;
+}
+
+.name {
+  font-size: 1.5vw;
+  margin-bottom: -0.5vw;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content;
+  column-gap: 1vw;
+  row-gap: 1vw;
+  margin-top: 1vw;
+}
+
+.square {
+  height: 2vw;
+  width: 2vw;
+  border-style: ridge;
+  border-color: black;
+  border-width: 0.15vw;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.yellow {
+  background-color: #f1e19d;
+}
+
+.orange {
+  background-color: #f1b776;
+}
+
+.pink {
+  background-color: #f2a5cd;
+}
+
+.turquoise {
+  background-color: #a5e4d3;
+}
+
+.green {
+  background-color: #abca71;
+}
+
+.light_blue {
+  background-color: #8ed3ea;
+}
+
+.dark_blue {
+  background-color: #3966a5;
+}
+
+.grey {
+  background-color: #989b9e;
+}
+
+.silver {
+  background-color: #dbdbd9;
+}
+
+.black {
+  background-color: black;
+}
+
+.allColors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 1vw;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+}
+
+button {
+  font-family: "Raleway", sans-serif;
+  font-size: 1vw;
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+  border-width: 1.5px;
+  width: 250px;
+  height: 50px;
+  letter-spacing: 2.5px;
+  margin-top: 1vw;
+  box-shadow: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #000000;
+  border-color: #000000;
+  border-width: 1.5px;
+  box-shadow: 0;
+}

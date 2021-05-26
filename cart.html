@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The cart page</title>
+</head>
+<body>
+    <template id="theCart">
+        <div class="cart_item">
+          <label class="itemName" for="fid-">NAME</label>
+          <button class="minus" type="button">-</button>
+          <input
+            type="number"
+            id="fid-"
+            min="0"
+            max="20"
+          />
+          <button class="plus" type="button">+</button>
+        </div>
+        <p class="price-row">DKK <span> </span></p>
+        <p class="price-each">DKK <span> </span></p>
+      </div>
+    </template>
+      <div class="cart">
+        <form action="">
+            <h3>SHOPPING CART</h3>
+          <div class="cart_content">
+          </div>
+          <h3 class="total">Total: <span></span></h3>
+          <button type="submit">GO TO CHECKOUT</button>
+        </form>
+      </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
