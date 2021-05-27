@@ -30,6 +30,7 @@ const CART = {
     if (CART.contents.length === 0) {
       cartContent.innerHTML = "<p>Cart is empty.</p>";
     } else {
+      let sum = 0;
       CART.contents.forEach((element) => {
         console.log(element);
 
@@ -71,10 +72,12 @@ const CART = {
         priceEl.textContent = element.price;
         const priceAll = cartCopy.querySelector(".price-row span");
         const prodTotal = element.price * element.qty;
+        sum += prodTotal;
         priceAll.textContent = prodTotal;
 
         cartContent.appendChild(cartCopy);
       });
+      document.querySelector(".total span").innerText = sum;
     }
   },
 
